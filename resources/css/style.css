@@ -1,0 +1,202 @@
+/* UNIVERSAL STYLING */
+html {
+  font-size: 18px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.subContent {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 60% 20% 20%;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.subContentAlt {
+  display: grid;
+  background-color: gray;
+  justify-items: center;
+}
+
+/* NAVIGATION STYLING */
+header {
+  position:fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: black;
+  opacity: .8;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.85);
+  box-shadow: 0 0 10px rgba(0,0,0,.85); /* Creates a drop shadow under the nav bar. */
+}
+
+.navItem {
+  padding: 10px;
+  font-family: 'Century Gothic', sans-serif;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  opacity: .55;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.navItem:hover {
+  opacity: 1;
+}
+
+#logo {
+  color: white;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+}
+
+
+/* LAMDING PAGE STYLING */
+.ctaMain, .ctaSlogan {
+  color: white;
+  opacity: .5;
+}
+
+.ctaMain {
+  font-size: 5rem;
+  letter-spacing: -.3rem;
+  font-weight: bold;
+}
+
+.ctaSlogan {
+  font-size: 2rem;
+  letter-spacing: .75rem;
+}
+
+.splash {
+  display: grid;
+  height: 50rem;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background: url(../imgs/kidReadingBW.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+/* MAIN STYLING */
+#wordCloud {
+  grid-column-start: 2;
+}
+
+.subContent p img {
+  width: 30rem;
+  margin: 2rem;
+}
+
+#programFeatures {
+  font-size: 4rem;
+  margin: 3rem 0 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+#programFeaturesDescription {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  color: lightgray;
+}
+
+.servicesGallery {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.services {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 15rem;
+  width: 100%;
+  opacity: .65;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.services:hover {
+  opacity: 1;
+}
+
+.services h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+#service1 {
+  background: url(../imgs/studyKids.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#service2 {
+  background: url(../imgs/courtKids.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#service3 {
+  background: url(../imgs/mentorKid.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+/* FOOTER STYLING */
+#footer {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+
+
+/* ANIMATION STYLING */
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.animate-pop-in {
+  -webkit-animation: pop-in .6s ease-out forwards;
+  animation: pop-in .6s ease-out forwards;
+  opacity: 0; /* Prevents flash when page loads */
+}
